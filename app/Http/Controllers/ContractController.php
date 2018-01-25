@@ -158,7 +158,7 @@ class ContractController extends Controller
      * @param $iid
      * @return array
      */
-    public  function getContract($iid)
+    protected function getContract($iid)
     {
         $contract = DB::table('contracts')
             ->join('companies', 'contracts_id', '=', 'contracts.id')
